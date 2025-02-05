@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function genapGanjil(angka) {
+        if (angka % 2 === 0) {
+          return `${angka} adalah bilangan genap`;
+        } else {
+          return `${angka} adalah bilangan ganjil`;
+        }
+      }
+
+      function bilanganPrima(angka) {
+        let value = 0;
+
+        for (let x = 1; x <= angka; x++) {
+          if (angka % x === 0) {
+            value += 1;
+          }
+        }
+
+        if (value <= 2) {
+          return `${angka} bilangan prima`;
+        }
+      }
+
+      for (let i = 1; i <= 20; i++) {
+        console.log(bilanganPrima(i));
+      }
+    </script>
+  </body>
+</html>
