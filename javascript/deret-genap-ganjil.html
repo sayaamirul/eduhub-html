@@ -15,22 +15,20 @@
         }
       }
 
-      function bilanganPrima(angka) {
+      function bilanganPrima(angka1, angka2) {
         let value = 0;
 
-        for (let x = 1; x <= angka; x++) {
-          if (angka % x === 0) {
-            value += 1;
+        for (let i = angka1; i <= angka2; i++) {
+          for (let x = 1; x <= angka; x++) {
+            if (angka % x === 0) {
+              value += 1;
+            }
           }
         }
 
         if (value <= 2) {
           return `${angka} bilangan prima`;
         }
-      }
-
-      for (let i = 1; i <= 20; i++) {
-        console.log(bilanganPrima(i));
       }
     </script>
   </body>
